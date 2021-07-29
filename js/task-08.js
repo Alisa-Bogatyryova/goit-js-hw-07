@@ -11,8 +11,8 @@ function BtnMakeBoxes() {
         const createDiv = document.createElement('div');
 
         createDiv.style.backgroundColor = randomColorRGB();
-        createDiv.style.width = (i * 10) + 20 + 'px';
-        createDiv.style.height = (i * 10) + 20 + 'px';
+        createDiv.style.width = 20 + i*10 + 'px';
+        createDiv.style.height = 20 + i*10  + 'px';
         items.push(createDiv);
     }
     boxes.append(...items);
@@ -24,7 +24,6 @@ const BtnClearBoxes = () => {
 
 function randomColorRGB() {
     const random = (min, max) => Math.round(Math.random() * (max - min) + min);
-
     const red = random(0, 255);
     const green = random(0, 255);
     const blue = random(0, 255);
